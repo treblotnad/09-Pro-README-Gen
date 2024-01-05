@@ -14,7 +14,7 @@ const questions = [
     type: "list",
     message: "Which license?",
     name: "license",
-    choices: ["MIT", "Apache", "ISC"],
+    choices: ["MIT", "Apache", "ISC", "None"],
   },
   {
     type: "input",
@@ -55,27 +55,28 @@ const questions = [
 const answers = [];
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  fs.writeFile("./output/" + fileName, JSON.stringify(data), (err) =>
+  fs.writeFile("./output/" + fileName, data, (err) =>
     err ? console.error(err) : console.log("Success!")
   );
 }
 
-function recordAnswers(response) {
-  answers.push(response.title);
-  answers.push(response.license);
-  answers.push(response.description);
-  answers.push(response.install);
-  answers.push(response.usage);
-  answers.push(response.contributing);
-  answers.push(response.tests);
-  answers.push(response.gitHubName);
-  answers.push(response.email);
-}
+// function recordAnswers(response) {
+//   answers.push(response.title);
+//   answers.push(response.license);
+//   answers.push(response.description);
+//   answers.push(response.install);
+//   answers.push(response.usage);
+//   answers.push(response.contributing);
+//   answers.push(response.tests);
+//   answers.push(response.gitHubName);
+//   answers.push(response.email);
+// }
 // TODO: Create a function to initialize app
 function init() {
   inquirer.prompt(questions).then((response) => {
-    recordAnswers(response);
-    writeToFile("testReadMe.md", answers);
+    // recordAnswers(response);
+    const markDown = generateMarkdown(response);
+    writeToFile("testReadMe.md", markDown);
   });
 }
 
