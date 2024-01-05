@@ -54,12 +54,28 @@ const questions = [
 ];
 const answers = [];
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  fs.writeFile("./output/" + fileName, JSON.stringify(data), (err) =>
+    err ? console.error(err) : console.log("Success!")
+  );
+}
 
+function recordAnswers(response) {
+  answers.push(response.title);
+  answers.push(response.license);
+  answers.push(response.description);
+  answers.push(response.install);
+  answers.push(response.usage);
+  answers.push(response.contributing);
+  answers.push(response.tests);
+  answers.push(response.gitHubName);
+  answers.push(response.email);
+}
 // TODO: Create a function to initialize app
 function init() {
   inquirer.prompt(questions).then((response) => {
-    console.log("README");
+    recordAnswers(response);
+    writeToFile("testReadMe.md", answers);
   });
 }
 
