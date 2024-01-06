@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+//required packages to run
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown.js");
 
-// TODO: Create an array of questions for user input
+//array of questions asked by inquirer8.2.4
 const questions = [
   {
     type: "input",
@@ -33,6 +33,11 @@ const questions = [
   },
   {
     type: "input",
+    message: "Please enter credit information",
+    name: "credit",
+  },
+  {
+    type: "input",
     message: "Please enter contribution guidelines",
     name: "contributing",
   },
@@ -53,25 +58,14 @@ const questions = [
   },
 ];
 const answers = [];
-// TODO: Create a function to write README file
+//function writes .md file to output folder
 function writeToFile(fileName, data) {
   fs.writeFile("./output/" + fileName, data, (err) =>
     err ? console.error(err) : console.log("Success!")
   );
 }
 
-// function recordAnswers(response) {
-//   answers.push(response.title);
-//   answers.push(response.license);
-//   answers.push(response.description);
-//   answers.push(response.install);
-//   answers.push(response.usage);
-//   answers.push(response.contributing);
-//   answers.push(response.tests);
-//   answers.push(response.gitHubName);
-//   answers.push(response.email);
-// }
-// TODO: Create a function to initialize app
+//function that initializes app
 function init() {
   inquirer.prompt(questions).then((response) => {
     // recordAnswers(response);
@@ -80,5 +74,5 @@ function init() {
   });
 }
 
-// Function call to initialize app
+//Initialization function call
 init();
