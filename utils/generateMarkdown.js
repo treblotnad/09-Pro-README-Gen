@@ -10,14 +10,14 @@ function renderLicenseBadge(license) {
   return badgeObj[license];
 }
 
-// TODO: Create a function that returns the license link
+// creates license link if in table of contents if a license is selected
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license == "None") return "";
   return "- [License](#license)";
 }
 
-// TODO: Create a function that returns the license section of README
+// Returns the license section of README with correct license sleceted
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license == "None") return "";
@@ -25,7 +25,7 @@ function renderLicenseSection(license) {
   This project is licensed under the ${license} License - see the License file for details.`;
 }
 
-// TODO: Create a function to generate markdown for README
+// Generates markdown for README using data from inquirer prompt
 function generateMarkdown(data) {
   const liceBadge = renderLicenseBadge(data.license);
   const liceLink = renderLicenseLink(data.license);
