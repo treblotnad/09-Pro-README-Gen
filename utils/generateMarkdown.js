@@ -55,7 +55,7 @@ ${data.contributing}
   ## Tests
 ${data.tests}
   ## Questions
-Please contact me at [${data.email}](mailto:${data.email}?subject=${data.title}%20Question) or [${data.gitHubName}](github.com/${data.gitHubName}) with any questions!
+Please contact me at [${data.email}](mailto:${data.email}) or [${data.gitHubName}](github.com/${data.gitHubName}) with any questions!
   ${liceSect}
   `;
 }

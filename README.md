@@ -24,7 +24,7 @@ Repo must be forked/cloned and inquirer8.2.4 must be installed.
 
 App runs using node index.js. Users will have questions asked for what should be put into README file. README file will be created in the output folder.
 
-
+![readme_creation_gif.gif](./assets/readme_creation_gif.gif)
 
 ## Credits
 
