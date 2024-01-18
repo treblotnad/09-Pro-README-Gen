@@ -1,7 +1,7 @@
-# Title
-  [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# 10-SVG-Logo-Maker
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   ## Description
-  Description
+  Command-line app that creates an SVG with 1-3 Characters within a circle, square or triangle. User can pick color of shape and text
 
   ## Table of Contents
   - [Installation](#installation)
@@ -13,17 +13,17 @@
   - [License](#license)
 
   ## Installation
-install
+Install
   ## Usage
-use it
+Use it
   ## Credits
-credits!
+credits
   ## Contributing
-contribute HERE!
+N/A
   ## Tests
-Test it bro
+npx jest within lib folder
   ## Questions
 Please contact me at [treblotnad@gmail.com](mailto:treblotnad@gmail.com) or [treblotnad](github.com/treblotnad) with any questions!
   ## License
-  This project is licensed under the Apache License - see the License file for details.
+  This project is licensed under the MIT License - see the License file for details.
   
